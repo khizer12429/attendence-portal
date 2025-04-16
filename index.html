@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Attendance Tracker</h1>
+      </header>
+    
+      <main class="container">
+        <!-- Attendance Form -->
+        <section class="form-section">
+          <h2>Mark Attendance</h2>
+          <form id="attendance-form">
+            <input id="name" type="text" placeholder="Student Name" required />
+            
+            <select id="opt" required>
+              <option value="">Select Status</option>
+              <option value="present">Present</option>
+              <option value="absent">Absent</option>
+              <option value="late">Late</option>
+            </select>
+            
+            <input id="date" type="date" required />
+            
+            <button onclick="result()" type="submit">Submit</button>
+          </form>
+        </section>
+    
+        <!-- Attendance Records -->
+        <section class="table-section">
+          <h2>Attendance Records</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody id="show">
+              <th id="numbershow"></th>
+              <th id="nameshow" ></th>
+              <th id="statusshow" ></th>
+              <th id="dateshow"></th>
+            </tbody>
+          </table>
+        </section>
+      </main>
+
+    <script src="sript.js"></script>
+</body>
+</html>
