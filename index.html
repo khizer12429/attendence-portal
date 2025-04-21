@@ -9,6 +9,7 @@
 <body>
     <header>
         <h1>Attendance Tracker</h1>
+        <input type="text" placeholder="search Student">
       </header>
     
       <main class="container">
@@ -16,9 +17,9 @@
         <section class="form-section">
           <h2>Mark Attendance</h2>
           <form id="attendance-form">
-            <input id="name" type="text" placeholder="Student Name" required />
+            <input id="names" type="text" placeholder="Student Name" required />
             
-            <select id="opt" required>
+            <select id="opt">
               <option value="">Select Status</option>
               <option value="present">Present</option>
               <option value="absent">Absent</option>
@@ -27,7 +28,7 @@
             
             <input id="date" type="date" required />
             
-            <button onclick="result()" type="submit">Submit</button>
+            <button onclick="result()" type="button">Submit</button>
           </form>
         </section>
     
@@ -43,7 +44,7 @@
                 <th>Date</th>
               </tr>
             </thead>
-            <tbody id="show">
+            <tbody id="show" >
               <th id="numbershow"></th>
               <th id="nameshow" ></th>
               <th id="statusshow" ></th>
