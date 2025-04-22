@@ -24,7 +24,7 @@ const sig = () => {
     let matchuser = arrr.filter(user=>user.signname == logname && user.signpass == logpass)
     console.log(matchuser)
     if(matchuser.length > 0){
-        window.location.href = "../main.html";
+        window.location.href = "main.html";
     }else{
         alert("wrong")
     }
