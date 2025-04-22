@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: "Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif";
+      background-color: #fafafa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    h1{
+        margin-bottom: 20px;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 350px;
+    }
+    .login-box {
+      background-color: #fff;
+      border: 1px solid #dbdbdb;
+      padding: 40px 40px 20px;
+      width: 100%;
+      text-align: center;
+    }
+    .login-box img {
+      width: 175px;
+      margin-bottom: 30px;
+    }
+    input {
+      width: 100%;
+      margin: 6px 0;
+      padding: 10px;
+      border: 1px solid #dbdbdb;
+      border-radius: 3px;
+      background-color: #fafafa;
+    }
+    button {
+      width: 100%;
+      padding: 8px;
+      background-color: #3897f0;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 4px;
+      margin-top: 12px;
+      cursor: pointer;
+    }
+    .separator {
+      display: flex;
+      align-items: center;
+      margin: 20px 0;
+    }
+    .separator div {
+      flex: 1;
+      height: 1px;
+      background-color: #dbdbdb;
+    }
+    .separator span {
+      margin: 0 10px;
+      color: #8e8e8e;
+      font-weight: bold;
+    }
+    .facebook-login {
+      color: #385185;
+      font-weight: bold;
+      margin-top: 10px;
+      text-decoration: none;
+    }
+    .signup-box {
+      background-color: #fff;
+      border: 1px solid #dbdbdb;
+      padding: 20px;
+      width: 100%;
+      text-align: center;
+      margin-top: 10px;
+    }
+    .signup-box a {
+      text-decoration: none;
+      color: #3897f0;
+      font-weight: bold;
+    }
+    .store-links img {
+      height: 40px;
+      margin: 10px 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="login-box">
+        <h1>Log In Page</h1>
+      <form id="loginForm">
+        <input type="text" id="username" placeholder="Phone number, username, or email" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <button type="submit">Log In</button>
+      </form>
+      <div class="separator">
+        <div></div>
+        <span>OR</span>
+        <div></div>
+      </div>
+      <a class="facebook-login" href="#">Log in with Facebook</a>
+    </div>
+    <div class="signup-box">
+      <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+    </div>
+  </div>
+
+  
+</body>
+</html>
