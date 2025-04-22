@@ -7,13 +7,15 @@ const btn = document.getElementById("btn")
 
 let arrr = JSON.parse(localStorage.getItem("signdata")) || [];
     
-const log = () => {
+const log = (event) => {
+    event.preventDefault();
     let save = {
         signname : username.value,
         signpass : password.value
     };
     arrr.push(save);
     localStorage.setItem("signdata", JSON.stringify(arrr));
+    window.location.href = "login.html";
 }
 const sig = () => {
     let logname = logusername.value;
