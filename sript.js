@@ -19,11 +19,6 @@ const result = () => {
     <td>${option}</td>
     <td>${dates}</td>`;
 
-  // set item
-  localStorage.setItem("name", Name);
-  localStorage.setItem("status", option);
-  localStorage.setItem("date", dates);
-
   const student = {
     name: Name,
     status: option,
@@ -34,7 +29,7 @@ const result = () => {
   localStorage.setItem("arr", JSON.stringify(arr));
 
 };
-console.log(arr);
+
 
 window.onload = () => {
     arr.forEach((student, index) => {
@@ -46,5 +41,49 @@ window.onload = () => {
       </tr>`;
     });
     num = arr.length + 1; 
-  };
+};
+
+ let searchingFunction = () => {
+  let name = document.querySelector('#searchName');
+  let date = document.querySelector('#searhDate');
+
+  let arr = JSON.parse(localStorage.getItem("arr")) || [];
   
+  if(name.value){
+    let filterArrByName = arr.filter((item) => item.name == name.value);
+    filterArrByName.forEach((student, index) => {
+      show.innerHTML  = `<tr>
+        <td>${index + 1}</td>
+        <td>${student.name}</td>
+        <td>${student.status}</td>
+        <td>${student.date}</td>
+      </tr>`;
+    });
+    
+  }else if(date.value){
+    let filterArrBtDate = arr.filter((item) => item.date == date.value);
+    show.innerHTML = ``;
+    filterArrBtDate.forEach((student, index) => {
+      show.innerHTML += `<tr>
+        <td>${index + 1}</td>
+        <td>${student.name}</td>
+        <td>${student.status}</td>
+        <td>${student.date}</td>
+      </tr>`;
+    });
+  
+  }else if(name.value && date.value){
+    let filterArrByNameAndDate = arr.filter((item) => (item.name == name.value && item.date == date.value));
+    filterArrByNameAndDate.forEach((student, index) => {
+      show.innerHTML = `<tr>
+        <td>${index + 1}</td>
+        <td>${student.name}</td>
+        <td>${student.status}</td>
+        <td>${student.date}</td>
+      </tr>`;
+    });
+  }
+  
+  name.value = "";
+  date.value= "";
+ }
