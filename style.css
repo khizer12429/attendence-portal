@@ -90,3 +90,11 @@
     flex: 1 1 200px;
   }
     
+  .search{
+    background-color: rgb(24, 174, 255);
+    color: white;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+  }
