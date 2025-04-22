@@ -1,17 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Signup</title>
-  <style>
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
     body {
-        font-family: "Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif";
+      font-family: "Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif";
       background-color: #fafafa;
       display: flex;
       justify-content: center;
@@ -20,7 +14,6 @@
     }
     h1{
         margin-bottom: 20px;
-
     }
     .container {
       display: flex;
@@ -96,45 +89,7 @@
       height: 40px;
       margin: 10px 5px;
     }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="login-box">
-        <h1>Signup Page</h1>
-      <form id="loginForm">
-        <input type="text" id="username" placeholder="Phone number, username, or email" required />
-        <input type="password" id="password" placeholder="Password" required />
-        <button type="submit">Signup</button>
-      </form>
-      <div class="separator">
-        <div></div>
-        <span>OR</span>
-        <div></div>
-      </div>
-      <a class="facebook-login" href="#">Log in with Facebook</a>
-    </div>
-    <div class="signup-box">
-      <p>Already have an account? <a href="index.html">Log in</a></p>
-    </div>
-  </div>
-
-  <script>
-    const form = document.getElementById('loginForm');
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const username = document.getElementById('username').value;
-      const password = document.getElementById('password').value;
-      const loginData = { username, password };
-    let previousdata = JSON.parse(localStorage.getItem('instagramLogin')) ||  []
-    previousdata.push(loginData)
-    localStorage.setItem("instagramLogin", JSON.stringify(previousdata))
-  
-      alert('Login data saved locally (check console/localStorage)');
-    });
-    // let previousdata = JSON.parse(localStorage.getItem('instagramLogin'))
-    // console.log(previousdata)
-    localStorage.removeItem("instagramLogin")
-  </script>
-</body>
-</html>
+    .login-box button a{
+        text-decoration: none;
+        color: white;
+    }

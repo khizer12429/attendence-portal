@@ -14,7 +14,7 @@ const result = () => {
   let Name = names.value;
   let option = opt.value;
   let dates = date.value;
-  show.innerHTML += ` <td>${num}</td>
+  show.innerHTML += `<td>${num++}</td>
     <td>${Name}</td>
     <td>${option}</td>
     <td>${dates}</td>`;
